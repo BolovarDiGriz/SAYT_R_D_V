@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <meta charset="utf-8">
+       <title>Воронежский институт МВД России</title>
+       <link href='favicon.ico' type=' image/x-icon' rel='shortcut icon'/>
+       <link rel="stylesheet" href="slayd.css">
+       <link rel="stylesheet" href="1111.css">
+ </head>
+<body>
+<header id="had">
+
+  <div id="site-title" >Воронежский институт МВД России</div>
+
+<ul id="cont">
+<a href="K:/Атом/SAYT/index.html" id="active">Главная</a>
+<a href="K:/Атом/SAYT/index2.html" id="active1">Библиотека</a>
+<a href="K:/Атом/SAYT/index3.html" id="active2">Расписание занятий</a>
+</ul>
+<img src="logo.png" alt="" style="position:absolute;left:250px;right:100px;top:20px;height:120px" >
+</header>
+<main>
+  <script type="text/javascript">
+  /* Устанавливаем стартовый индекс слайда по умолчанию: */
+  let slideIndex = 1;
+  /* Вызываем функцию, которая реализована ниже: */
+  showSlides(slideIndex);
+
+  /* Увеличиваем индекс на 1 — показываем следующий слайд: */
+  function nextSlide() {
+  showSlides(slideIndex += 1);
+  }
+
+  /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
+  function previousSlide() {
+  showSlides(slideIndex -= 1);
+  }
+
+  /* Устанавливаем текущий слайд: */
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+  }
+
+  /* Функция перелистывания: */
+  function showSlides(n) {
+  /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
+  let slides = document.getElementsByClassName("item");
+
+  /* Проверяем количество слайдов: */
+  if (n > slides.length) {
+  slideIndex = 1
+  }
+  if (n < 1) {
+  slideIndex = slides.length
+  }
+
+  /* Проходим по каждому слайду в цикле for: */
+  for (let slide of slides) {
+  slide.style.display = "none";
+  }
+  /* Делаем элемент блочным: */
+  slides[slideIndex - 1].style.display = "block";
+  }
+
+  var el = document.getElementsByClassName('menu-item');
+  for(var i=0; i<el.length; i++) {
+  el[i].addEventListener("mouseenter", showSub, false);
+  el[i].addEventListener("mouseleave", hideSub, false);
+  }
+  function showSub(e) {
+  if(this.children.length>1) {
+  this.children[1].style.height = "auto";
+  this.children[1].style.overflow = "visible";
+  this.children[1].style.opacity = "1";
+  } else {
+  return false;
+  }
+  }
+  function hideSub(e) {
+  if(this.children.length>1) {
+  this.children[1].style.height = "0px";
+  this.children[1].style.overflow = "hidden";
+  this.children[1].style.opacity = "0";
+  } else {
+  return false;
+  }
+  }
+
+  </script>
+
+<div class="slider">
+
+
+<div class="item">
+<img src="30.jpg">
+</div>
+
+
+<div class="item">
+<img src="31.jpg">
+</div>
+
+
+<div class="item">
+<img src="32.jpg">
+</div>
+
+<div class="item">
+<img src="33.jpg">
+</div>
+
+<div class="item">
+<img src="34.jpg">
+</div>
+
+<div class="item">
+<img src="35.jpg">
+</div>
+
+<div class="item">
+<img src="36.jpg">
+</div>
+
+<a class="previous" onclick="previousSlide()">❮</a>
+<a class="next" onclick="nextSlide()">❯</a>
+</div>
+
+<div id="site-title2" >Образовательный портал Воронежского института МВД России</div>
+<a id="active3">Воронежский институт МВД России готовит специалистов для подразделений уголовного розыска, общественной безопасности, дознания, следствия, информационных технологий, связи и защиты информации, специальной связи и информационных центров органов внутренних дел.</a>
+<a id="active4">Где бы ни проходили службу выпускники, они не забывают своих педагогов и наставников, продолжают славные традиции института.</a>
+<a id="active5">Официальный сайт Воронежского института МВД России находится по адресу: </a>
+<a href="http://vi.mvd.ru/" id="active6">www.vi.mvd.ru</a>
+</main>
+<footer id="had2">
+  <img src="logo.png" alt="" style="position:absolute;left:250px;right:100px;top:860px;height:120px" >
+<a id="active7">Воронежский институт МВД России</a>
+<a id="active10"><img src="phone.png" style="position:absolute;top:3px;right:123px">+7 (473) 247-67-07</a>
+<a href="mailto:vrnin@mvd.ru:" id="active11"><img src="email.png" style="position:absolute;top:3px;right:108px">vrnin@mvd.ru</a>
+<a id="active12"><img src="address.png" style="position:absolute;top:3px;right:296px">394065, г. Воронеж, пр-т Патриотов, 53</a>
+<a id="active8">Федеральное государственное казенное образовательное учреждение высшего образования</a>
+<a id="active9">© 2008-2021, Воронежский институт МВД России. Все права защищены.</a>
+</footer>
+</body>
+</html>

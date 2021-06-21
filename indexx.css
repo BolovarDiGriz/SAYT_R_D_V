@@ -1,0 +1,59 @@
+<style>
+    /* Обнуляю отступы и убираю маркеры у списков. */
+    ul, li {
+        margin:0;
+        padding:0;
+        list-style-type:none;
+    }
+
+    /* Задаю параметры для основного, родительского блока, меню выпадающего списка. */
+    #menu {
+        display:block;
+        position:absolute;
+        top:20px;
+        left:20px;
+
+    }
+
+    /* Задаю стили для блоков выпадающего списка. */
+    #menu > li {
+        display:inline-block;
+        height:20px;
+    /* Считаем координаты относительно исходного места. */
+        position:relative;
+    }
+
+    /* Задаю стили, чтобы скрыть дочерние блоки выпадающего списка. Ну и немного украшаю. */
+    #menu > li > ul {
+        position:absolute;
+        top:20px;
+        left: 10px;
+        display:none;
+        background-color: bisque;
+        border-radius: 5px;
+        width: 185px;
+        font-size: 14px;
+        padding: 10 0 10 10;
+    }
+
+    /* Так я делаю прежде скрытую часть видимой — при наведении курсора. */
+    #menu > li:hover > ul {
+        display:block;
+    }
+</style>
+<ul id="menu">
+<li><a href="#">Раздел меню №1</a></li>
+<li><a href="#">Раздел меню №2</a>
+    <ul>
+        <li><a href="#">Подраздел №1 второго меню</a></li>
+        <li><a href="#">Подраздел №2 второго меню</a></li>
+    </ul>
+</li>
+<li><a href="#">Раздел меню №3</a>
+    <ul>
+        <li><a href="#">Подраздел №1 третьего меню</a></li>
+        <li><a href="#">Подраздел №2 третьего меню</a></li>
+        <li><a href="#">Подраздел №3 третьего меню</a></li>
+    </ul>
+</li>
+</ul>
